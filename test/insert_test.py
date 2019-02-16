@@ -41,3 +41,13 @@ def make_service():
     # 作ったcredsを使ってサービスオブジェクト生成
     service = build('calendar', 'v3', credentials=creds)
     return service
+
+def insert(service=None, **kwargs):
+    import json
+    print(kwargs)
+    with open(os.path.join(SECRET_FOLDER, 'insert_test.json'), 'w') as post_json:
+         json.dump(kwargs, post_json)
+
+if __name__ == '__main__':
+    # test
+    insert(summary='test',start='2222')
