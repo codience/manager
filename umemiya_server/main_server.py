@@ -1,3 +1,4 @@
+# coding: utf-8
 import os
 import sys
 
@@ -16,5 +17,9 @@ def index():
     notice = meta.home()
     return notice
 
+@app.route('/ame3yaaaa/api/transfer')
+def exec_transfer():
+    return render_template('transfer.html')
+
 if __name__ == '__main__':
-    app.run(debug=True, host=host, port=port)
+    app.run(debug=True)
