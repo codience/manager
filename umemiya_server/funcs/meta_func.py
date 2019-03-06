@@ -12,3 +12,15 @@ def read_yaml(path):
         return
     else:
         return data
+
+
+def read_api_path(path):
+    try:
+        with open(path, mode='r') as api:
+            apis = api.read().split('\n')
+            api_dict = {api.split(' ')[1]:api.split(' ')[0] for api in apis}
+    except Exception as e:
+        print(e)
+        return
+    else:
+        return api_dict
