@@ -27,6 +27,15 @@ def exec_transfer():
 def print_lesson():
     return render_template('print.html')
 
+@app.route(apis['adminonly'] + apis['insert'], methods=["GET", "POST"])
+def add_user():
+    try:
+        value_list = request.form.getlist('user_status')
+        # return ["名前", "カナ","性別"]
+        common.add_csv(value_list)
+    except:
+        value_list = []
+    return render_template('add_user.html', value_list=value_list)
 
 
 if __name__ == '__main__':

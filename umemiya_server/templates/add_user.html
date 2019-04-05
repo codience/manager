@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>会員追加</title>
+</head>
+<body>
+{% block body %}
+<form class="" action="/ame3yaaaa/api/secret/insert/" method="post">
+  名前:<input type="text" name="user_status" ><br>
+  カナ:<input type="text" name="user_status"><br>
+  性別:<input type="radio" name="user_status" value="man">男性
+    <input type="radio" name="user_status" value="women">女性<br>
+  <input type="submit" name="" value="ユーザー追加">
+    <br>
+</form>
+{% if not value_list == [] %}
+<p>追加したゾ</p>
+{% for v in value_list %}
+<li>{{ v }}</li>
+{% endfor %}
+{% endif %}
+{% endblock %}
+
+</body>
+</html>
