@@ -24,7 +24,7 @@ pyasn1-modules==0.2.4
 pycparser==2.19
 PyOpenGL==3.1.0
 pyxel==1.0.2
-PyYAML==3.13
+PyYAML==5.4
 requests==2.21.0
 requests-oauthlib==1.2.0
 rsa==4.0
